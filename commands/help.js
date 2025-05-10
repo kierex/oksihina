@@ -10,7 +10,7 @@ module.exports = {
 
   description: "Displays all available commands or detailed info about a specific command",
 
-  author: "Cid Kagenou",
+  author: "vraxyxx",
 
   version: "3.0",
 
@@ -214,7 +214,7 @@ module.exports = {
 
     helpMessage += `> 𝗘𝗻𝗷𝗼𝘆 𝘂𝘀𝗶𝗻𝗴 𝘁𝗵𝗲 𝗯𝗼𝘁!`;
 
-    helpMessage += `> Portfolio: https://portfolio-production-e070.up.railway.app/`;
+    helpMessage += `> Portfolio: https://vrax-autobot.onrender.com/`;
 
     api.shareContact(helpMessage, api.getCurrentUserID(), threadID);
 
