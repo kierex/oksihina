@@ -104,7 +104,7 @@ module.exports = {
 
             if (status === "fail") {
 
-                console.log(`[DEBUG] Autovern API failed: ${JSON.stringify(response.data)}`);
+                console.log(`[DEBUG] Autoaljur API failed: ${JSON.stringify(response.data)}`);
 
                 return api.sendMessage("❌ API request failed.", event.threadID);
 
