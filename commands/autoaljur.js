@@ -170,7 +170,7 @@ module.exports = {
 
         return api.sendMessage(
 
-            `ℹ️ Autovern is currently ${this.config.enabled ? "enabled" : "disabled"}.\nUse:\n- /autoaljur on\n- /autoaljur off`,
+            `ℹ️ Autoaljur is currently ${this.config.enabled ? "enabled" : "disabled"}.\nUse:\n- /autoaljur on\n- /autoaljur off`,
 
             event.threadID
 
