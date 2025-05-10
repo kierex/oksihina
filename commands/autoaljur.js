@@ -2,11 +2,11 @@ const axios = require("axios");
 
 module.exports = {
 
-    name: "autovern", 
+    name: "autoaljur", 
 
     config: {
 
-        name: "autovern",
+        name: "autoaljur",
 
         nonPrefix: false,
 
@@ -14,7 +14,7 @@ module.exports = {
 
     },
 
-    description: "autovern tralalulela tarantado ka",
+    description: "autoaljur tralalulela tarantado ka",
 
     usage: "Use '/' prefix for messages (e.g., /hello)",
 
@@ -22,7 +22,7 @@ module.exports = {
 
         if (!this.config.enabled) return; // <<<< Check if command is enabled
 
-        console.log(`[DEBUG] Autovern handleEvent triggered: ${event.type}, body: ${event.body}`);
+        console.log(`[DEBUG] Autoaljur handleEvent triggered: ${event.type}, body: ${event.body}`);
 
         const url = process.env.AUTOCASS || "https://kagenoubotv2-production.up.railway.app/api";
 
@@ -120,13 +120,13 @@ module.exports = {
 
                 }
 
-                console.log(`[DEBUG] Autovern sent message, ID: ${info.messageID}`);
+                console.log(`[DEBUG] Autoaljur sent message, ID: ${info.messageID}`);
 
                 global.Kagenou.replies[info.messageID] = {
 
                     callback: async ({ api, event }) => {
 
-                        console.log(`[DEBUG] Autovern reply callback for messageID: ${info.messageID}`);
+                        console.log(`[DEBUG] Autoaljur reply callback for messageID: ${info.messageID}`);
 
                         await this.handleEvent({ api, event });
 
@@ -150,13 +150,13 @@ module.exports = {
 
     async run({ api, event, args }) {
 
-        console.log(`[DEBUG] Autovern run triggered in thread: ${event.threadID}`);
+        console.log(`[DEBUG] Autoaljur run triggered in thread: ${event.threadID}`);
 
         if (args && args[0] === "on") {
 
             this.config.enabled = true;
 
-            return api.sendMessage("✅ Autovern has been enabled.", event.threadID);
+            return api.sendMessage("✅ Autoaljur has been enabled.", event.threadID);
 
         }
 
@@ -164,13 +164,13 @@ module.exports = {
 
             this.config.enabled = false;
 
-            return api.sendMessage("❌ Autovern has been disabled.", event.threadID);
+            return api.sendMessage("❌ Autoaljur has been disabled.", event.threadID);
 
         }
 
         return api.sendMessage(
 
-            `ℹ️ Autovern is currently ${this.config.enabled ? "enabled" : "disabled"}.\nUse:\n- /autovern on\n- /autovern off`,
+            `ℹ️ Autovern is currently ${this.config.enabled ? "enabled" : "disabled"}.\nUse:\n- /autoaljur on\n- /autoaljur off`,
 
             event.threadID
 
