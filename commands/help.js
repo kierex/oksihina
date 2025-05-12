@@ -214,7 +214,7 @@ module.exports = {
 
     helpMessage += `> 𝗘𝗻𝗷𝗼𝘆 𝘂𝘀𝗶𝗻𝗴 𝘁𝗵𝗲 𝗯𝗼𝘁!`;
 
-    helpMessage += `> Portfolio: https://vrax-autobot.onrender.com/`;
+    helpMessage += `> Portfolio: vrn.up.railway.app`;
 
     api.shareContact(helpMessage, api.getCurrentUserID(), threadID);
 
